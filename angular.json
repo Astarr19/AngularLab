@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angLab"
+    }
+  },
+  "defaultProject": "angLab",
+  "cli": {
+    "analytics": false
+  }
 }

@@ -1,0 +1,68 @@
+* {
+    font-family: sans-serif;
+}
+
+#container {
+    background-color: lightgray;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 75%;
+    margin: auto;
+}
+
+button {
+    outline: none;
+}
+
+#title {
+    text-align: center;
+}
+
+#objectives {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.list-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#finish-bttn {
+    border-radius: 20px;
+    border: 1px solid lime;
+    background-color: yellow;
+}
+
+#finish-bttn:active {
+    background-color: lime;
+}
+
+p {
+    flex-grow: 4;
+}
+
+#x-bttn {
+    border: none;
+    background-color: lightgray;
+}
+
+#add-group {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5px;
+}
+
+#new-goal {
+    width: 85%;
+    height: 45px;
+    font-size: 25px;
+    border-radius: 10px;
+}
+
+#add {
+    height: 45px;
+    border-radius: 10px;
+
+}

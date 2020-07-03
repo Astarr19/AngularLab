@@ -1,0 +1,15 @@
+<div id="container">
+    <h1 id="title">To-Do List</h1>
+    <ul id="objectives">
+        <li class="list-items" *ngFor="let el of tasks">
+            <button id="finish-bttn" *ngIf="completeCheck(el)">completed</button>
+            <p *ngIf="completeCheck(el)">{{el.task}}</p>
+            <p *ngIf="!completeCheck(el)" [ngStyle]="stylesList">{{el.task}}</p>
+            <button id="x-bttn"><img src="assets/clear.png"></button>
+        </li>
+    </ul>    
+    <div id="add-group">
+        <input type="text" id="new-goal">
+        <button id="add">Add to List</button>
+    </div>
+</div>
