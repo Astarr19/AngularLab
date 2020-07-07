@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ToDoComponent } from './to-do/to-do.component';
+import {FormsModule} from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { ToDoComponent } from './to-do/to-do.component';
     ToDoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

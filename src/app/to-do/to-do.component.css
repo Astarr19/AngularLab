@@ -64,5 +64,10 @@ p {
 #add {
     height: 45px;
     border-radius: 10px;
+}
 
+#filter-input {
+    width: 95%;
+    height: 25px;
+    border-radius: 10px;
 }

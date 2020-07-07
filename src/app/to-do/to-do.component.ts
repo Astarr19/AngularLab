@@ -12,6 +12,9 @@ interface Todo {
 })
 export class ToDoComponent{
 
+  newGoal: string;
+  filter: string;
+  x;
   tasks: Todo[]= [
     {task: "Eat food", completed: true},
     {task: "Pet dogs", completed: true},
@@ -25,6 +28,10 @@ export class ToDoComponent{
       return false;
     } else return true;
   }
-  
-  
+  completeTask = (el) => el.completed = true;
+  removeTask = (el) => this.tasks.splice(this.tasks.indexOf(el), 1);
+  addTask = () => {
+    let add: Todo = { task: this.newGoal, completed: false};
+    this.tasks.push(add);
+  }
 }

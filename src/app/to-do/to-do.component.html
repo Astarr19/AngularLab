@@ -1,15 +1,16 @@
 <div id="container">
     <h1 id="title">To-Do List</h1>
+    <input [(ngModel)]="filter" id="filter-input" placeholder="Filter your tasks">
     <h2 *ngIf="emptyList()">Nothing to do!</h2>
     <ul id="objectives">
         <li class="list-items" *ngFor="let el of tasks">
-            <button id="finish-bttn" *ngIf="completeCheck(el)">completed</button>
+            <button id="finish-bttn" *ngIf="completeCheck(el)" (click)="completeTask(el)">completed</button>
             <p [ngStyle]='{"text-decoration":el.completed ? "line-through" : "none"} '>{{el.task}}</p>
-            <button id="x-bttn" ><img src="assets/clear.png"></button>
+            <button id="x-bttn" (click)="removeTask(el)"><img src="assets/clear.png"></button>
         </li>
     </ul>    
-    <div id="add-group">
-        <input type="text" id="new-goal">
-        <button id="add">Add to List</button>
-    </div>
+    <form id="add-group">
+        <input [(ngModel)]="newGoal" [ngModelOptions]="{standalone: true}" id="new-goal" placeholder="New task">
+        <button id="add" (click)="addTask()">Add to List</button>
+    </form>
 </div>
