@@ -20,10 +20,11 @@ export class ToDoComponent{
   ];
 
   completeCheck = (el: Todo): boolean => el.completed === false;
-  emptyList = (): boolean => this.tasks.length === 0;
-
-  stylesList: object = {
-    "text-decoration":"line-through"
+  emptyList = (): boolean => {
+    if (this.tasks.length !== 0) {
+      return false;
+    } else return true;
   }
-
+  
+  
 }
