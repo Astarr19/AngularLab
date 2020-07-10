@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 interface Todo {
   task: string;
@@ -29,8 +30,8 @@ export class ToDoComponent{
   }
   completeTask = (el) => el.completed = true;
   removeTask = (el) => this.tasks.splice(this.tasks.indexOf(el), 1);
-  addTask = () => {
-    let add: Todo = { task: this.newGoal, completed: false};
+  addTask = (form: NgForm) => {
+    let add: Todo = { task: form.value.newGoal, completed: false};
     this.tasks.push(add);
   }
   editTask = (el) =>{

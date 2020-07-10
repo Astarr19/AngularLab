@@ -10,8 +10,8 @@
             <button id="x-bttn" (click)="removeTask(el)"><img src="assets/clear.png"></button>
         </li>
     </ul>    
-    <form #f="ngForm" (ngSubmit)="addTask()">
-        <input [(ngModel)]="newGoal" [ngModelOptions]="{standalone: true}" id="new-goal" placeholder="New task">
+    <form #f="ngForm" (ngSubmit)="addTask(f)">
+        <input name="newGoal" [ngModelOptions]="{updateOn: 'change'}" id="new-goal" placeholder="New task" ngModel>
         <button id="add">Add to List</button>
     </form>
 </div>
